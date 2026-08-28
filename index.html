@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site</title>
+
+    <title>Controle de Frequência - 4ª Companhia</title>
 
     <style>
         * {
@@ -13,103 +14,217 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
-
-        header {
-            background: #111827;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            background: #1f2937;
-            padding: 15px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        nav a:hover {
-            color: #60a5fa;
-        }
-
-        .hero {
-            min-height: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #4b4f52;
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            padding: 20px;
+        }
+
+        .login-box {
+            background: #292c2e;
+            border-top: 6px solid #b51e2b;
+            border-radius: 10px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .logo {
+            width: 95px;
+            height: 95px;
+            margin: 0 auto 20px;
+            border: 3px solid #b51e2b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #3b3f41;
+            font-size: 34px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .titulo {
             text-align: center;
-            padding: 40px 20px;
+            margin-bottom: 8px;
+            font-size: 25px;
+            letter-spacing: 1px;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
+        .companhia {
+            text-align: center;
+            color: #d32635;
+            font-size: 18px;
+            font-weight: bold;
             margin-bottom: 30px;
         }
 
-        .botao {
-            background: #2563eb;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
+        .linha {
+            height: 1px;
+            background: #55595c;
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
             font-weight: bold;
+            color: #d9d9d9;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 20px;
+            border: 1px solid #666a6d;
+            border-radius: 5px;
+            background: #3b3f41;
+            color: white;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #b51e2b;
+        }
+
+        select option {
+            background: #292c2e;
+        }
+
+        .botao {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            background: #b51e2b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            letter-spacing: 1px;
         }
 
         .botao:hover {
-            background: #1d4ed8;
+            background: #d32635;
         }
 
-        footer {
-            background: #111827;
-            color: white;
+        .aviso {
             text-align: center;
-            padding: 25px;
+            margin-top: 22px;
+            font-size: 11px;
+            color: #9fa2a4;
+            line-height: 1.5;
+        }
+
+        .rodape {
+            text-align: center;
+            margin-top: 20px;
+            color: #d0d0d0;
+            font-size: 11px;
+        }
+
+        @media (max-width: 480px) {
+            .login-box {
+                padding: 32px 25px;
+            }
+
+            .titulo {
+                font-size: 21px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h2>MEU SITE</h2>
-    </header>
+    <div class="container">
 
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
-    </nav>
+        <div class="login-box">
 
-    <section class="hero">
-        <h1>Bem-vindo!</h1>
+            <div class="logo">
+                4ª
+            </div>
 
-        <p>
-            Este é o meu primeiro site criado com HTML e hospedado pelo GitHub.
-        </p>
+            <h1 class="titulo">
+                CONTROLE DE FREQUÊNCIA
+            </h1>
 
-        <a href="#" class="botao">Saiba mais</a>
-    </section>
+            <div class="companhia">
+                4ª COMPANHIA
+            </div>
 
-    <footer>
-        <p>© 2026 - Meu Site</p>
-    </footer>
+            <div class="linha"></div>
+
+            <form>
+
+                <label for="perfil">
+                    PERFIL DE ACESSO
+                </label>
+
+                <select id="perfil" name="perfil">
+                    <option value="">Selecione o perfil</option>
+                    <option value="missoes">Cadete Missões</option>
+                    <option value="admin">Administrador</option>
+                </select>
+
+
+                <label for="usuario">
+                    USUÁRIO
+                </label>
+
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Digite seu usuário"
+                    autocomplete="username"
+                >
+
+
+                <label for="senha">
+                    SENHA
+                </label>
+
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                >
+
+
+                <button type="submit" class="botao">
+                    ENTRAR
+                </button>
+
+            </form>
+
+            <div class="aviso">
+                Sistema de Controle de Frequência<br>
+                Acesso restrito aos usuários autorizados.
+            </div>
+
+        </div>
+
+        <div class="rodape">
+            4ª Companhia • Controle de Frequência
+        </div>
+
+    </div>
 
 </body>
 </html>
